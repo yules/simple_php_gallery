@@ -1,3 +1,6 @@
+NOTE: This was written in 2011 as incentive to learn php, and hosted at sourceforge. Still running on sites around the world.
+
+
 author:
 ----------------------------------------------------------------------------------------------------------
 Yuval Leshem
