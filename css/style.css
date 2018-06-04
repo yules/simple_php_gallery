@@ -1,0 +1,200 @@
+
+body {
+	font-family:arial;
+	font-size: small;
+}
+button {
+	margin-left:5px;
+
+}
+/*
+button {
+	border: 1px solid #eee;
+	margin:5px;
+	padding: 4px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #bbb;
+}
+
+input[type="submit"] {
+	border: 1px solid #eee;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:5px;
+	padding: 4px;
+}
+
+input[type="submit"]:hover {
+	background-color: #bbb;
+}
+*/
+textarea {
+	border:none;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	overflow:hidden;
+	background-color: #ffffd3;	
+}
+
+h2 {
+	padding-left:10px;
+}
+
+#newItemDiv {
+	border-bottom: 1px dashed black;
+}
+
+.loginPage {	
+	border: 1px black solid;	
+	width:300px;
+	padding-left:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.logintitle {
+	font-size:large;
+	padding-top: 5px;
+	width:100%;
+	
+}
+
+.loginheader {	
+	float:left;
+	margin-right:20px;
+}
+
+.header {
+	background-color:#ccc;
+	color:white;
+	margin-bottom:20px;
+	padding-bottom:5px;
+}	
+
+
+.login {
+	font-size:medium;	
+}
+
+.remember {
+	font-size:small;	
+}
+
+.toolbar {
+	padding-bottom:5px;
+	font-size:medium;	
+	width:100%;	
+	border-bottom:1px solid #ccc;
+	
+}
+
+.toolbar a {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding:5px;
+	margin-left:30px;
+	text-decoration:none;
+	color:black;	
+}
+
+.toolbar a:hover{
+	background-color:#ccc;
+
+}
+
+.message {
+	color:red;
+	font-weight:bold;
+}
+
+.item {	
+	border-bottom: 1px dashed black;		
+	padding: 5px;	
+}
+
+.itemcontent{	
+	padding: 5px;
+	border-bottom: 1px solid #ccc;	
+	
+}
+
+.itemcontenteditable:hover {	
+	background-color: #ffffd3;
+	cursor: text;
+	cursor: text;
+}
+
+.itempanel {
+	padding:5px;
+}
+
+#logo {
+	padding-top: 5px 0px 0px 0px;
+}
+
+/*
+.item a {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color:#eee;
+	color: black;
+	text-decoration:none;
+	padding:4px;
+	border: 1px solid #eee;
+}
+
+.item a:hover {
+	background-color:#bbb;
+}
+*/
+
+.thumbdiv {
+	display:inline;
+	padding:10px;
+}
+/*
+.file_input_textbox
+{
+	float: left;
+	border:none;
+}
+
+.file_input_div
+{
+	position: relative; 
+	width: 100px; 
+	overflow: hidden;
+}
+
+.file_input_button
+{
+	border: 1px solid #eee;
+	margin:5px;
+	padding: 4px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.file_input_button_hover {
+	background-color: #bbb;
+}
+
+.file_input_hidden
+{
+	font-size: 45px; 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	opacity: 0; 
+	
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+*/

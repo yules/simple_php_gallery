@@ -1,0 +1,25 @@
+<!doctype html> 
+<html>
+<head>
+	<title>News Editor</title>
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<link rel="shortcut icon" href='img/icon.gif' />
+	<script src='js/jquery.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='js/utils.js' type='text/javascript' charset='utf-8'></script>
+	<script src='js/news.js' type='text/javascript' charset='utf-8'></script>	
+</head>
+<body>
+	<div class='toolbar'>	
+		<img id='logo' src='img/icon.gif' />		
+		<a href='galleries.html'>Galleries</a>		
+		<a href='tags.html'>Tags</a>
+		<a href='javascript:doLogout();'>Logout</a>
+	</div>
+	<h2>News Editor</h2>
+	<div id='newItemDiv'>
+		<button id='newButton'>New Item</button>
+	</div>
+	<div class='news' id='content'>
+	</div>
+	<iframe name='uploadTarget'style='position:absolute; width:0px; height:0px; top:-32px; left:-32px;' onload='javascript:refresh();' />
+</body>

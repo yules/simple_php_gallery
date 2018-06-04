@@ -1,0 +1,30 @@
+body {
+	font-family:arial;	
+	font-size: small;
+
+}
+
+.nbutton{
+	border: none;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:5px;
+	padding: 5px;
+}
+
+.nbutton:hover {
+	background-color: #bbb;
+}
+
+.tarea  {
+	background-color: #ffffd3;	
+	border:none;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:5px;
+	overflow:hidden;
+}
+
+label {
+	margin-left:5px;
+}

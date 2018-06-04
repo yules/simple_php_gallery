@@ -1,0 +1,95 @@
+<!doctype html> 
+
+<html>
+<head>
+	<title>Viewer</title>
+	<link rel="shortcut icon" href='img/icon.gif' />
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script src='js/jquery.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='js/utils.js' type='text/javascript' charset='utf-8'></script>
+	<script language='javascript'>
+		$(document).ready(function() {
+			// see which view mode we are
+			if (getParam('id') == null) {
+				loadGalleryList();
+			} else {
+				loadGallery(getParam('id'));
+			}
+			
+		});
+		
+		function loadGalleryList() {
+			getJson('galleries=true', galleryListLoaded);
+		}
+		
+		function loadGallery(id) {
+			getJson('galleries=true&id=' + id, galleryLoaded);
+		}
+		
+		function galleryLoaded(data) {
+			galleryDetails = data[0];
+			// present gallery details
+			var detailsHtml = '';
+			if (galleryDetails.thumb_path != '') {
+				detailsHtml = detailsHtml + '<div><img height="100" src="' + galleryDetails.thumb_path + '"></img>';
+			}
+			detailsHtml = detailsHtml + '<h2>' + galleryDetails.name + '</h2>' + 
+							  '<h3>' + nl2br_js(galleryDetails.description) + '</h3>' +
+							  '<div>' + galleryDetails.url + '</div><br/></div>';
+			
+			
+			$('#content').append($(detailsHtml));
+			// get gallery photos
+			getJson('gallery_details=true&id=' + galleryDetails.id, photosLoaded);
+		}
+		
+		function photosLoaded(data) {			
+			var html = '';
+
+			for (var i=0; i<data.length; i++) {				
+				html = html + prepareItemHtml(data[i]);			
+			}
+			
+			$('#content').append($(html));
+		}
+
+		function prepareItemHtml(item) {
+			var html = '<div class="item">' + 
+					   '<div class="itemcontent"><img height="100" src="' + item.path + '"></img></div>' +
+					   '<div class="itemcontent">' + item.name + '</div>' + 
+					   '<div class="itemcontent">' + nl2br_js(item.description) + '</div>' + 
+					   '</div>';
+			return html;
+		}
+		
+		function galleryListLoaded(data) {
+			var html = '<h2>Gallery list</h2>';
+
+			for (var i=0; i<data.length; i++) {				
+				html = html + prepareGalleryHtml(data[i]);			
+			}
+			
+			$('#content').append($(html));
+		}
+		
+		function prepareGalleryHtml(item) {		
+			var html = '<div class="item">' + 			   
+			   '<div class="itemcontent">';
+			   if (item.thumb_path != '') {
+					html = html + '<img height="100" src="' + item.thumb_path + '"></img>';
+			   }
+			   html = html + '</div>' +
+			   '<div class="itemcontent">' + item.name + '</div>' + 
+			   '<div class="itemcontent">' + nl2br_js(item.description) + '</div>' + 
+			   '<div class="itemcontent">' + item.url + '</div>' + 
+			   '<div class="itemcontent"><a href="viewer.html?id=' + item.id + '">go to gallery</a></div>' +
+			   '</div>';
+			return html;
+		}
+	</script>
+</head>
+<body>
+	<img id='logo' src='img/icon.gif' />		
+	<div id='content'></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html> 
+<html>
+<head>
+	<title>Gallery Editor</title>
+	<link rel="shortcut icon" href='img/icon.gif' />
+	<link rel='stylesheet' type='text/css' href='css/style.css'>
+	<script src='js/jquery.min.js' type='text/javascript' charset='utf-8'></script>
+	<script src='js/utils.js' type='text/javascript' charset='utf-8'></script>
+	<script src='js/galleries.js' type='text/javascript' charset='utf-8'></script>	
+</head>
+<body>
+	<div class='toolbar'>	
+		<img id='logo' src='img/icon.gif' />	
+		<a href='news.html'>News</a>		
+		<a href='tags.html'>Tags</a>
+		<a href='javascript:doLogout();'>Logout</a>
+	</div>
+	<h2>Galleries Editor</h2>
+	<div id='newItemDiv'>
+		<button id='newButton'>New Item</button>
+	</div>
+	<div class='galleries' id='content'>
+	</div>
+	<iframe name='uploadTarget'style='position:absolute; width:0px; height:0px; top:-32px; left:-32px;' onload='javascript:refresh();' />
+</body>
