@@ -1,4 +1,4 @@
-NOTE: This was written in 2011 as incentive to learn php, and hosted at sourceforge. Still running on sites around the world.
+NOTE: This was written in 2009 as incentive to learn php, and hosted at sourceforge. Still running on sites around the world.
 
 
 author:
