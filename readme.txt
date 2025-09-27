@@ -3,8 +3,7 @@ NOTE: This was written in 2009 as incentive to learn php, and hosted at sourcefo
 
 author:
 ----------------------------------------------------------------------------------------------------------
-Yuval Leshem
-yuval.leshem@gmail.com
+github.com/yules
 
 about:
 ----------------------------------------------------------------------------------------------------------
@@ -49,4 +48,5 @@ version 2:
 Please feel free to mail with questions.
 
 Yuval
+
 
